@@ -84,3 +84,83 @@ Alt + Shift + I : 드래그된 모든 줄의 끝에 커서를 모두 생성
 <br/><br/>
 Alt + Shift + a : 블록 주석 묶기
 * 주석으로 묶을 코드 부분을 드래그하고 단축키를 누르면 주석 처리 된다.
+
+# ANACONDA (가상환경) 사용법
+1. 가상환경 생성, 활성화, 비활성화, 삭제.
+2. 패키지 설치, 업데이트, 삭제.
+3. Jupyter Notebook 실행.
+4. 문제 해결 및 환경 설정.
+
+
+### 1. 가상환경 관리
+#### (가상환경 생성)
+`conda create --name <env_name> python=3.9.13` 생성 후 python 설치까지  
+  
+`conda create --name <env_name>`  가상환경 생생 이후 따로 python 설치  
+`conda install python=<version>`  
+
+#### (가상환경 활성화 / 비활성화)
+`conda activate <env_name>`  
+`conda deactivate`  
+#### (가상환경 삭제)
+`conda remove --name <env_name> --all`  
+
+### 2. Anaconda 패키지 관리
+`conda` 명령어를 사용하여 패키지를 설치, 업데이트 및 삭제할 수 있다.  
+
+#### (패키지 설치)
+`conda install <package_name>`  
+ex) conda install pandas numpy  
+#### (패키지 업데이트)
+`conda update <package_name>`  
+#### (패키지 삭제)
+`conda remove <package_name>`  
+#### (설치된 패키지 목록 확인)
+`conda list`  
+#### (특정 환경의 패키지 목록 확인)
+`conda list --name <env_name>`  
+
+### 3. Jupyter Notebook 실행
+Anaconda에는 Jupyter Notebook이 포함되어 있어, 가상환경에서 jupyter Notebook을 실행할 수 있습니다.  
+#### (Jupyter Notebook 설치)
+`conda install jupyter`  
+#### (Jupyter Notebook 실행)
+`jupyter notebook`
+
+### 4. 문제 해결
+#### (가상환경에 필요한 패키지 설치)
+필요한 패키지를 가상환경에 설치하려면, 먼저 가상환경을 활성화한 후 패키지를 설치합니다.  
+`conda activate myenv`  
+`conda install <package_name>`  
+
+#### 설정 파일을 통해 환경 설정  
+사용자 정의 설정을 추가하기 위해 설정 파일을 편집할 수 있습니다.  
+예: Jupyter 설정 파일 생성  
+`jupyter notebook --generate-config`  
+생성된 설정 파일 (~/.jupyter/jupyter_notebook_config.py)을 편집하여 원하는 설정을 추가합니다.
+
+### 6. 환경 정보 확인
+#### (가상환경 목록 보기)  
+`conda info --envs`  
+이 명령어를 사용하면 설치된 모든 가상환경의 목록을 볼 수 있습니다.
+
+#### (가상환경 정보 확인)  
+`conda list --name <env_name>`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
